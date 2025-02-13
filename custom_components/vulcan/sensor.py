@@ -190,10 +190,10 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
             VulcanLessonEntity(
                 coordinator,
                 data,
-                i + 1,
+                i,
                 generate_entity_id(
                     ENTITY_ID_FORMAT,
-                    f"lesson_{i + 1}_{data['student_info']['full_name']}",
+                    f"lesson_{i}_{data['student_info']['full_name']}",
                     hass=hass,
                 ),
             )
@@ -202,10 +202,10 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
             VulcanLessonEntity(
                 coordinator,
                 data,
-                i + 1,
+                i,
                 generate_entity_id(
                     ENTITY_ID_FORMAT,
-                    f"lesson_{i + 1}_tomorrow_{data['student_info']['full_name']}",
+                    f"lesson_{i}_tomorrow_{data['student_info']['full_name']}",
                     hass=hass,
                 ),
                 True,
